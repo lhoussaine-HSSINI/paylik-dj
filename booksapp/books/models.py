@@ -15,7 +15,7 @@ class Author (BaseModel) :
 
 class Book (BaseModel) :
     title = models.CharField(null=False, blank=False, max_length=100)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name="books")
     rating = models.FloatField(default=0.0)
 
     def __str__(self):

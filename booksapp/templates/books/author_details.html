@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for book in author.book_set.all %}
+            {% for book in author.books.all %}
             <tr>
                 <th scope="row">{{ book.id }}</th>
                 <td>{{ book.title }}</td>

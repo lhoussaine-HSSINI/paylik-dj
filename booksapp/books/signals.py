@@ -15,7 +15,7 @@ def update_book_rating (book) :
     book.save()
 
 def update_author_rating (author) :
-    books = author.book_set.all()
+    books = author.books.all()
     ratings_sum = sum([book.rating for book in books])
 
     author.score = round_decimal(ratings_sum / books.count(), 2)
